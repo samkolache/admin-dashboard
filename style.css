@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Lora';
 }
+
 
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1.10fr 1fr 1fr 1fr;
+    grid-template-columns: .75fr 1fr 1fr 1fr;
     grid-template-rows: .5fr 1fr 1fr;
     grid-template-areas: 
         "sidebar header header header"
@@ -16,17 +19,81 @@
 }
 
 .header {
-    background: #D1CECE;
+    background: #d3d3d3;
     grid-area: header;
 }
 
 .main-content {
-    background: #F45959;
+    background: #776871;
     grid-area: main-content;
 }
 
 .sidebar {
-    background: #485BFF;
+    background: #F5E0B7;
     grid-area: sidebar;
+    display: grid;
+    grid-template-rows: .25fr .75fr .25fr .30fr;
 }
+
+.sidebar > p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #310A31
+
+}
+
+.first-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 30px;
+}
+
+.second-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 30px;
+}
+
+.first-icons > p {
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 160px;
+    font-weight: bold;
+    color: #310A31;
+    transition: all .2s ease-in-out;
+}
+
+
+
+.second-icons > p {
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 160px;
+    font-weight: bold;
+    color: #310A31;
+    transition: all .2s ease-in-out;
+}
+
+.first-icons > p:hover, 
+.second-icons > p:hover{
+    color: #949494;
+    transform: scale(1.1)
+}
+
+
+.icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+
 
